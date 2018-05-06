@@ -887,7 +887,7 @@ function gdbMI( command_and_args, options, gdbWrapper )
 	{
 		/* This is crazy but GDB almost provides a JSON output */
 		args = args.replace(/=/g, "!:");
-		args = args.replace(/([a-zA-Z0-9-]*)!:/g, "\"$1\":");
+		args = args.replace(/([a-zA-Z0-9-_]*)!:/g, "\"$1\":");
 
 		/* Remove array labels */
 		args = removeArrayLabels(args);
